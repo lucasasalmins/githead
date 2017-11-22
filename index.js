@@ -14,9 +14,14 @@ function getGitHeadArgs () {
 
 function init () {
   console.log("Helpful message about how git works");
-  var gitInit = childProcess.spawnSync('git', getGitHeadArgs());
-  var gitResponse = gitInit.stdout.toString() || gitInit.stderr.toString();
+  var gitResponse = executeGitCommand();
   console.log(gitResponse);
+  return gitResponse;
+}
+
+function executeGitCommand () {
+  var gitCommand = childProcess.spawnSync('git', getGitHeadArgs());
+  var gitResponse = gitCommand.stdout.toString() || gitCommand.stderr.toString();
   return gitResponse;
 }
 
