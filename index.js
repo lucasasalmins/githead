@@ -5,6 +5,5 @@ function init () {
 }
 
 module.exports = {
-  testString : "my test string",
   init : init
 };
