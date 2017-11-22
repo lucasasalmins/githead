@@ -4,7 +4,7 @@
   "description": "Helpful command line tool that stops you from losing your git.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Jon Sanders, Alexis Carlier, Christine Horrocks & Lucas Salmins",
   "license": "ISC",
