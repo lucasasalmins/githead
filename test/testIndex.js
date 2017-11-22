@@ -1,5 +1,6 @@
 var assert = require('assert');
 var index = require('../index.js');
+var proxyquire = require('proxyquire');
 var sinon = require('sinon');
 
 describe('.init', function () {
@@ -9,4 +10,20 @@ describe('.init', function () {
     assert(consoleSpy.calledWith("Helpful message about how git works"));
     console.log.restore();
   });
+  it('executes "git init"', function () {
+
+    var index = proxyquire('../index.js', {
+      'child_process': {
+        spawnSync: function (command, args) {
+                      return {
+                        stdout: {
+                          toString: () => "git init success string"
+                        }
+                      };
+                    }
+      }
+    });
+
+    sinon.assert.match(index.init(), "git init success string");
+  })
 });
