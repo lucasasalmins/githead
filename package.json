@@ -8,6 +8,9 @@
   },
   "author": "Jon Sanders, Alexis Carlier, Christine Horrocks & Lucas Salmins",
   "license": "ISC",
+  "bin": {
+    "githead": "./run.js"
+  },
   "devDependencies": {
     "mocha": "^4.0.1"
   },
