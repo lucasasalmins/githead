@@ -1,4 +1,4 @@
-# githead
+# Githead
 ### Helpful command line tool that stops you from losing your git.
 ```
        (   )
@@ -20,10 +20,16 @@
 
 After struggling to get to grips with using Git Hub in a multi-person project, our group decided to come up with a command line tool which would help beginners through all of their git teething issues.
 
+## Install
 To get this amazing tool simply clone this repository on to your computer.
 Navigate into the head of the directory and then run the following command. 
 ```bash
 $ npm install -g 
+```
+
+## Run
+``bash
+$ githead helpme
 ```
 
 ## Using githead
