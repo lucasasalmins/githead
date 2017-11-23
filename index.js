@@ -8,23 +8,28 @@ if (getGitHeadArgs().length) {
   console.log("You didn't tell githead to do anything!");
 }
 
-function getGitHeadArgs () {
+function getGitHeadArgs() {
   return process.argv.slice(2, process.argv.length);
 }
 
-function init () {
+function init() {
   console.log("Helpful message about how git works");
   var gitResponse = executeGitCommand();
   console.log(gitResponse);
   return gitResponse;
 }
 
-function executeGitCommand () {
+function helpme() {
+  console.log("usage: githead [init] [merge] [pull] [add]")
+}
+
+
+function executeGitCommand() {
   var gitCommand = childProcess.spawnSync('git', getGitHeadArgs());
   var gitResponse = gitCommand.stdout.toString() || gitCommand.stderr.toString();
   return gitResponse;
 }
 
 module.exports = {
-  init : init
+  init: init
 };
