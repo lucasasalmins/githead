@@ -28,14 +28,14 @@ $ npm install -g
 ```
 
 ## Run
-``bash
+```bash
 $ githead helpme
 ```
 
-## Using githead
+## Using Githead
 
 Once you have installed the tool you can call it gloably from any directory on the command line. All you need to do is swap the "git" section of a normal git command with "githead. For example:
-* githead init. 
+### githead init. 
 If you type
 ```bash
 $ githead init
@@ -51,4 +51,21 @@ It will then ask you if that is what you really want to do.
 $ Are you sure this is what you want to do?'
 ```
 If are are sure that this is what you mean to do you can choose to git init. However, if you have realised you have made a bit of a cock up, then you can cancel.
+
+## Currently Avalible Commands
+* git helpme
+* git init
+* git pull
+* git merge (this one is a little different)
+
+## Tech Stack
+* Node
+* Inquirer
+* Mocha
+* Sinon
+* Proxyquire
+* Inquirer-test
+* Chalk
+
+
 
