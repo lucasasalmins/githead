@@ -22,9 +22,9 @@ After struggling to get to grips with using Git Hub in a multi-person project, o
 
 ## Install
 To get this amazing tool simply clone this repository on to your computer.
-Navigate into the head of the directory and then run the following command. 
+Navigate into the head of the directory and then run the following command.
 ```bash
-$ npm install -g 
+$ npm install -g
 ```
 
 ## Run
@@ -35,7 +35,7 @@ $ githead helpme
 ## Using Githead
 
 Once you have installed the tool you can call it gloably from any directory on the command line. All you need to do is swap the "git" section of a normal git command with "githead. For example:
-### githead init. 
+### githead init.
 If you type
 ```bash
 $ githead init
@@ -45,11 +45,12 @@ into the command line. Our tool will take the command and return some helpful in
 ```bash
 $ Helpful message about how git works
 ```
-It will then ask you if that is what you really want to do. 
+It will then ask you if that is what you really want to do.
 
 ```bash
-$ Are you sure this is what you want to do?'
+$ Are you sure this is what you want to do?
 ```
+
 If are are sure that this is what you mean to do you can choose to git init. However, if you have realised you have made a bit of a cock up, then you can cancel.
 
 ## Currently Avalible Commands
@@ -68,4 +69,8 @@ If are are sure that this is what you mean to do you can choose to git init. How
 * Chalk
 
 
+## ASCII art
+Credit for two pieces of ASCII art for our logo is due to:
 
+* [!!!!!Krogg98](http://ascii.co.uk/art/shit)
+* [Wny](http://www.chris.com/ascii/index.php?art=people/faces)
