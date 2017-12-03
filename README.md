@@ -2,21 +2,21 @@
 ### _A helpful command line tool that stops you from losing your git._
 
 ```
-                         (   )
-                       (   ) (
-                        ) _   )
-                         ( \_
-                       _(_\ \)_
-                     (____\___))
-                     ,-      `.
-                    /  githead  \
-                   | __         |
-                    \   \__  -. |
-                    ( o( o) 7/ /\
-                    /  /     -|/
-                    \ (_    /
-                    \ --.  /
-                    (_____/
+       (   )
+     (   ) (
+      ) _   )
+       ( \_
+     _(_\ \)_
+   (____\___))
+   ,-      `.
+  /  githead  \
+ | __         |
+  \   \__  -. |
+  ( o( o) 7/ /\
+  /  /     -|/
+  \ (_    /
+  \ --.  /
+  (_____/
 ```
 Our first experiences working on group software projects taught us that not having confidence with git is a major drawback. Establishing a good git workflow is essential and mistakes made can be very costly. We decided to build a command line tool that would help beginners through their teething issues by:
 * Providing useful reminders about what certain git commands do
@@ -26,7 +26,7 @@ Our first experiences working on group software projects taught us that not havi
 Githead can be installed directly from NPM:
 
 ```
-$ npm install global npm install githead-helper
+$ npm install global githead-helper
 ```
 
 Or by cloning from GitHub:
@@ -54,6 +54,13 @@ Hints:
 > Add a remote repository on GitHub to share the work in this directory with others.
 ```
 
+## Project Overview
+This was a challenging group project we worked on over four days. It introduced us to using Node.js and approaches to building a command line tool.
+
+We arrived at a solution for wrapping around git functions by using child processes. Arguments passed to the `$ githead` command are then passed to a synchronous child process within the program which executes the git command. This solution means that any flags that would be passed to a git command can also be handled by githead.
+
+Our strategy for testing was to use unit tests to test all code paths, but to stub the console and the 'inquirer' framework, then use a feature testing to ensure inquirer behaves as expected. Key difficulties on this project were around effective testing. The frequent stubbing and restoring of the console object made the tests very brittle; when one test failed, the error message for that test, as well as the result for any subsequent test, was not shown because the console is only restored after each test passes. 'inquirer' also proved very difficult to test. As such, this project is a work-in-progress, with incomplete features on several branches to allow us (and any willing pull-requesters!) to continue working on it.
+
 
 ## Currently Available Commands
 * git helpme (provides githead usage instructions)
@@ -63,16 +70,14 @@ Hints:
 
 ## Technologies Used
 * Node.js
-* Inquirer - command line framework
-* Chalk - command line framework
+* Inquirer - command line framework for asking the user questions
+* Chalk - command line framework for adding colour to commmand line output
 
 ### Testing
 * Mocha
 * Sinon
 * Proxyquire
 * Inquirer-test
-
-
 
 ## ASCII art
 Credit for two pieces of ASCII art for our logo is due to:

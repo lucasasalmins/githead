@@ -1,6 +1,6 @@
 {
   "name": "githead-helper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Helpful command line tool that stops you from losing your git.",
   "main": "index.js",
   "scripts": {
