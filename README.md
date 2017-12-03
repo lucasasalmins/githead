@@ -22,6 +22,13 @@ Our first experiences working on group software projects taught us that not havi
 * Providing useful reminders about what certain git commands do
 * Asking the user for confirmation before executing a git command
 
+## Authors
+
+* Lucas Salmins
+* Christine Horrocks
+* Alexis Carlier
+* Jon Sanders
+
 ## Instructions
 Githead can be installed directly from NPM:
 
