@@ -2,14 +2,18 @@ var childProcess = require('child_process');
 
 console.log("You launched githead!");
 
-if (getGitHeadArgs().length) {
-  eval(getGitHeadArgs()[0])();
-} else {
-  console.log("You didn't tell githead to do anything!");
-}
+methodSelector(getGitHeadArgs()[0]);
 
-function getGitHeadArgs() {
-  return process.argv.slice(2, process.argv.length);
+function methodSelector(githeadArg) {
+  var selection = {
+    "init": init,
+    "pull": pull,
+    "status": status,
+    default: function () {
+      console.log("Erm..you didn't tell githead to do anything!");
+    }
+  };
+  return (selection[githeadArg] || selection['default'])();
 }
 
 function init() {
