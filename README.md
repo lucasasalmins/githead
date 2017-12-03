@@ -1,72 +1,77 @@
 # Githead
-### Helpful command line tool that stops you from losing your git.
+### _A helpful command line tool that stops you from losing your git._
+
 ```
-       (   )
-     (   ) (
-      ) _   )
-       ( \_
-     _(_\ \)_
-   (____\___))
-   ,-      `.
-  /  githead  \
- | __         |
-  \   \__  -. |
-  ( o( o) 7/ /\
-  /  /     -|/
-  \ (_    /
-  \ --.  /
-  (_____/
+                         (   )
+                       (   ) (
+                        ) _   )
+                         ( \_
+                       _(_\ \)_
+                     (____\___))
+                     ,-      `.
+                    /  githead  \
+                   | __         |
+                    \   \__  -. |
+                    ( o( o) 7/ /\
+                    /  /     -|/
+                    \ (_    /
+                    \ --.  /
+                    (_____/
+```
+Our first experiences working on group software projects taught us that not having confidence with git is a major drawback. Establishing a good git workflow is essential and mistakes made can be very costly. We decided to build a command line tool that would help beginners through their teething issues by:
+* Providing useful reminders about what certain git commands do
+* Asking the user for confirmation before executing a git command
+
+## Instructions
+Githead can be installed directly from NPM:
+
+```
+$ npm install global npm install githead-helper
 ```
 
-After struggling to get to grips with using Git Hub in a multi-person project, our group decided to come up with a command line tool which would help beginners through all of their git teething issues.
-
-## Install
-To get this amazing tool simply clone this repository on to your computer.
-Navigate into the head of the directory and then run the following command.
-```bash
+Or by cloning from GitHub:
+```
+$ git clone git@github.com:jonsanders101/githead.git
+$ cd githead
 $ npm install -g
-```
-
-## Run
-```bash
-$ githead helpme
 ```
 
 ## Using Githead
 
-Once you have installed the tool you can call it gloably from any directory on the command line. All you need to do is swap the "git" section of a normal git command with "githead. For example:
-### githead init.
-If you type
-```bash
+Simply replace 'git' with 'githead' when executing normal git commands. For example:
+
+```
 $ githead init
 ```
-into the command line. Our tool will take the command and return some helpful information about what "git init" will do to the file you are working in.
 
-```bash
-$ Helpful message about how git works
+Will return the following message:
+
 ```
-It will then ask you if that is what you really want to do.
+Your directory is now initialised with git. That means everything in this directory and any sub--directories is being tracked.
+Hints:
 
-```bash
-$ Are you sure this is what you want to do?
+> Add a '.gitignore' file to stop certain files from being tracked
+> Add a remote repository on GitHub to share the work in this directory with others.
 ```
 
-If are are sure that this is what you mean to do you can choose to git init. However, if you have realised you have made a bit of a cock up, then you can cancel.
 
-## Currently Avalible Commands
-* git helpme
+## Currently Available Commands
+* git helpme (provides githead usage instructions)
 * git init
 * git pull
-* git merge (this one is a little different)
+* git merge
 
-## Tech Stack
-* Node
-* Inquirer
+## Technologies Used
+* Node.js
+* Inquirer - command line framework
+* Chalk - command line framework
+
+### Testing
 * Mocha
 * Sinon
 * Proxyquire
 * Inquirer-test
-* Chalk
+
 
 
 ## ASCII art
