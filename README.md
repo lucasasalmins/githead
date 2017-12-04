@@ -1,6 +1,12 @@
 # Githead
 ### _A helpful command line tool that stops you from losing your git._
 
+
+
+![Help screen](https://i.imgur.com/d0NI72l.png)
+
+![githead pull]([img]https://i.imgur.com/vSYhUyG.png[/img])
+
 ```
        (   )
      (   ) (
