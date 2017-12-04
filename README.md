@@ -1,29 +1,10 @@
 # Githead
 ### _A helpful command line tool that stops you from losing your git._
 
-
-
 ![Help screen](https://i.imgur.com/d0NI72l.png)
 
-![githead pull]([img]https://i.imgur.com/vSYhUyG.png[/img])
+![githead pull](https://i.imgur.com/vSYhUyG.png)
 
-```
-       (   )
-     (   ) (
-      ) _   )
-       ( \_
-     _(_\ \)_
-   (____\___))
-   ,-      `.
-  /  githead  \
- | __         |
-  \   \__  -. |
-  ( o( o) 7/ /\
-  /  /     -|/
-  \ (_    /
-  \ --.  /
-  (_____/
-```
 Our first experiences working on group software projects taught us that not having confidence with git is a major drawback. Establishing a good git workflow is essential and mistakes made can be very costly. We decided to build a command line tool that would help beginners through their teething issues by:
 * Providing useful reminders about what certain git commands do
 * Asking the user for confirmation before executing a git command
